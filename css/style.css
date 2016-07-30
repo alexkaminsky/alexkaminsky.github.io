@@ -153,20 +153,47 @@ body{
   color:   #7F8C8D;
 }
 
-#part-2 h5,#part-2 h6,#part-2 .progress{
+.part-text h5,.part-text h6,.part-text .progress{
   margin-left: 20px;
   margin-right: 20px;
 }
 
-#part-2 h5{
+.part-text h5{
   color:#607d8b;
   text-align: left;
 }
 
+.part-text h5 a{
+  margin-left: 10px;
+  color: #6b6969;
+  font-size: 19px;
+}
 
-#part-2 h6{
+
+.part-text h6{
   text-align: left;
   color: #37474f;
+}
+
+.part-text i{
+  color: color: #506771;
+}
+
+.part-text h6 a{
+    font-weight: 600;
+    color: #1c5b69;
+}
+
+.part-text img, .part-text video{
+    width: calc(100% - 20px);
+    margin: 10px;
+    border: solid 2px #c5c5c5;
+    border-radius: 3px;
+}
+
+h6.date{
+    color: #b7b7b7;
+    font-weight: 400;
 }
 
 #part-3,  #part-6{
@@ -470,7 +497,17 @@ body{
   background-size: 400px 300px;
 }
 
-#cell-ware, #cell-img{
+#cell-srv{
+  background-image: url(http://i.imgur.com/PIJWrEi.jpg);
+  background-repeat: repeat;
+}
+
+#cell-ware{
   background-image: url(../img/orange_swirl.png);
+  background-repeat: repeat;
+}
+
+#cell-img{
+  background-image: url(http://i.imgur.com/hH0upNX.jpg);
   background-repeat: repeat;
 }
