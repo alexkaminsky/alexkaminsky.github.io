@@ -1,10 +1,147 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<!--other stuff-->
-	</head>
-	<body>
-		<!--body content goes here-->
-		<p>yoyoyoyo</p>
-	</body>
+<html lang="en">
+ <head>
+
+	<meta charset="utf-8">
+	<title>Alex Kaminsky</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="img/ak.png"/>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="js/light.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+  <script src="js/onscreen.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  <link href="css/grid.css" rel="stylesheet">
+  <link href="css/light.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href="media-queries.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+
+
+
+  <div class="part" id="part-name">
+    <h1 style="float:left">ALEX KAMINSKY</h1>
+    <h2 style="float:right"><a href="https://github.com/alexkaminsky"><i class="fa fa-github"></i></a></h2>
+  </div>
+
+  <div class="part" id="part-0">
+
+    <h6 id="nav">
+      <i class="fa fa-dot-circle-o" onclick="clip('#cell-site')" id="btn_site"></i>
+      <i class="fa fa-circle" onclick="clip('#cell-ware')" id="btn_ware"></i>
+      <i class="fa fa-circle" onclick="clip('#cell-srv')" id="btn_srv"></i>
+      <i class="fa fa-circle" onclick="clip('#cell-img')" id="btn_img"></i>
+    </h6>
+
+    <div style="/*background-color:#FBC02D*/" id="cell-site">
+      <div>
+        <h3>ROBOTICS</h3>
+        <h4><i class="material-icons">memory</i></h4>
+        <h5>Autonomous and remote-controlled robots for the FIRST Tech Challenge</h5>
+      </div>
+    </div>
+
+    <div style="/*background-color:#00838F;*/display:none" id="cell-ware">
+      <div>
+        <h3>DATABASES</h3>
+        <h4><i class="material-icons">dns</i></h4>
+        <h5>Management, administration, and security</h5>
+      </div>
+    </div>
+
+    <div style="/*background-color:#FBC02D;*/display:none" id="cell-srv">
+      <div>
+        <h3>CHEMISTRY</h3>
+        <h4><i class="material-icons">public</i></h4>
+        <h5>Focusing on atmospheric chemistry to clean up our air</h5>
+      </div>
+    </div>
+
+    <div style="/*background-color:#0097A7;*/display:none" id="cell-img">
+      <div>
+        <h3>RENEWABLE ENERGY</h3>
+        <h4><i class="material-icons">nature_people</i></h4>
+        <h5>Researching and building clean, alternative energy sources</h5>
+      </div>
+    </div>
+    <i class="fa fa-chevron-down" style="position: absolute;z-index: 3;font-size: 54px;bottom: 5px;left: calc(50% - 27px);color: #eee;"></i>
+  </div>
+
+  <div class="part" id="part-1">
+    <h6>
+      I am a senior at Deerfield Academy who is interested in biochemistry, the environment, databases, and programming. I am a member of the programming group for the Deerfield Academy FIRST Robotics team. Over the past few summers, I have studied discreet mathematics at Stanford University and organic chemistry and databases at Harvard University.
+    </h6>
+    <br/>
+	</div>
+
+
+
+  <div class="control">
+    <h6>Skills</h6>
+  </div>
+
+
+	<div class="part" id="part-2">
+
+    <h5>MySQL <span class="devicons devicons-mysql"></span></h5>
+		<h6>
+      During the summer of 2016, I studied databases at the Harvard University Summer School Program. I used these skills to help develop the databases for <a href="https://codeyourcloud.com/about">CodeYourCloud</a>, an online code editor, and <a href="https://arisense.io">ARISense</a>, a system of low-cost air pollution sensor nodes.
+		</h6>
+		<div class="progress progress-striped"><div class="progress-bar" style="width: 30%"></div></div>
+    <br/>
+
+    <h5>Java <span class="devicons devicons-java"></span></h5>
+    <h6>
+      I have studied Java throughout high school, and use it to program the robots for Deerfield's FIRST Robotics team.
+    </h6>
+    <div class="progress progress-striped"><div class="progress-bar" style="width: 60%"></div></div>
+    <br/>
+
+    <h5>Python <span class="devicons devicons-python"></span></h5>
+    <h6>
+      I use Python programs running on Raspberry Pis (small linux computers) to perform functions such as monitor the pressure of the gas within the biogas chamber I constructed.
+    </h6>
+    <div class="progress progress-striped"><div class="progress-bar" style="width: 40%"></div></div>
+    <br/>
+
+    <h5>Arduino</h5>
+    <h6>
+      Using Arduino microcontrollers, I have created a robot which changes direction based on a person's arm movements (using a Kinect sensor)
+    </h6>
+    <div class="progress progress-striped"><div class="progress-bar" style="width: 70%"></div></div>
+    <br/>
+
+    <h5>HTML <span class="devicons devicons-html5"></span>, CSS <span class="devicons devicons-css3"></span>, Javascript <span class="devicons devicons-javascript_badge"></span></h5>
+    <h6>
+    </h6>
+    <div class="progress progress-striped"><div class="progress-bar" style="width: 50%"></div></div>
+    <br/>
+
+    <h5>PHP <span class="devicons devicons-php"></span></h5>
+    <h6>
+    </h6>
+    <div class="progress progress-striped"><div class="progress-bar" style="width: 20%"></div></div>
+    <br/>
+	</div>
+
+  <div class="control">
+    <h6>Experience and Projects</h6>
+  </div>
+
+  <div class="control">
+    <h6>References</h6>
+    <!--add resume here-->
+  </div>
+
+	<script src="lib/fit.js"></script>
+	<script src="js/main.js"></script>
+</body>
 </html>
