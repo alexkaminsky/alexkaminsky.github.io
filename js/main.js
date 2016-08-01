@@ -12,19 +12,26 @@ $(".main-header-1").fitText();
 var clip_index = 0;
 var clips = ["#cell-site","#cell-ware","#cell-srv","#cell-img"];
 var in_progress = false;
+var wait_per = 0;
 
 set_interval();
 
 function set_interval(){
   //clears the interval
-  window.setTimeout(function(){
+  window.setInterval(function(){
     clip_index++;
     if(clip_index === clips.length){
       clip_index = 0;
     }
 
     clip(clips[clip_index]);
-  }, 6000);
+  }, 3000);
+
+  window.setInterval(function(){
+    wait_per += 10;
+    var _per = 100 * (wait_per / 3000);
+    $("#bar span").css("width", (_per + "%"));
+  }, 10);
 }
 
 
@@ -34,8 +41,8 @@ function clip(elem){
     //
     //
     var id = "#btn_" + elem.replace("#cell-","");
-    $(".fa-dot-circle-o").removeClass("fa-dot-circle-o").addClass("fa-circle");
-    $(id).addClass("fa-dot-circle-o");
+    $(".fa-circle-o").removeClass("fa-circle-o").addClass("fa-circle");
+    $(id).removeClass("fa-circle").addClass("fa-circle-o");
     //
     //
 
@@ -75,9 +82,9 @@ function clip(elem){
         4 = (left+100,0)
 
     down:
-           1___2
-          /   /
+         1___2
         /   /
+       /   /
      3/___/4
 
 
@@ -121,7 +128,6 @@ function clip(elem){
     var per = 0;
     var interval = window.setInterval(function(){
       per++;
-
       if(per <= 50){
         var percent = (per * 2) / 100;
 
@@ -151,7 +157,6 @@ function clip(elem){
         if(per === 100){
           clearInterval(interval);
 
-          set_interval();
           in_progress = false;
 
           $(elem).css("clip-path", "none");
@@ -160,6 +165,9 @@ function clip(elem){
 
           $(".will-remove").css("display","none");
           $(".will-remove").removeClass("will-remove");
+
+          $("#bar span").css("width","0");
+          wait_per = 0;
         }
       }
     }, 10);
