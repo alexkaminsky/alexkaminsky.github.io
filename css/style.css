@@ -3,6 +3,10 @@ body{
   font-family: 'Lato', sans-serif;
 }
 
+h5, h6, p{
+  max-width: 1000px;
+}
+
 #intro{
   position: absolute;
   right: 0;
@@ -20,6 +24,8 @@ body{
 
   margin-bottom: 10px;
   z-index: 4;
+
+  height: 30px;
 }
 
 #part-name h1{
@@ -62,6 +68,10 @@ body{
   margin-bottom: 10px;
 
   margin-top: -10px;
+}
+
+#part-0 h6, #part-0 h5{
+  max-width: none;
 }
 
 #part-0 > div{
