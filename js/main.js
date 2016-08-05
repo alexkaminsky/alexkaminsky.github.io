@@ -1,6 +1,8 @@
 $(document).ready(function(){
   // Change this to the correct selector.
   $("#part-0").css("min-height",$(window).height() - 79);
+  robotics.init();
+  robotics.show();
 
   $( window ).resize(function() {
     $("#part-0").css("min-height",$(window).height() - 79);
@@ -10,7 +12,8 @@ $(document).ready(function(){
 $(".main-header-1").fitText();
 
 var clip_index = 0;
-var clips = ["#cell-site","#cell-ware","#cell-srv","#cell-img"];
+var clip_elem = "";
+var clips = ["#cell-robot","#cell-data","#cell-chem","#cell-energy"];
 var in_progress = false;
 var wait_per = 0;
 
@@ -28,21 +31,26 @@ function set_interval(){
   }, 3000);
 
   window.setInterval(function(){
-    wait_per += 10;
-    var _per = 100 * (wait_per / 3000);
+    wait_per += 50;
+    var _per = 100 * (wait_per / 1000);
     $("#bar span").css("width", (_per + "%"));
-  }, 10);
+  }, 50);
 }
 
 
 function clip(elem){
-  if(in_progress === false){
+  if(in_progress === false && elem !== clip_elem){
+    clip_elem = elem;
     in_progress = true;
     //
     //
+
+    /*
     var id = "#btn_" + elem.replace("#cell-","");
     $(".fa-circle-o").removeClass("fa-circle-o").addClass("fa-circle");
     $(id).removeClass("fa-circle").addClass("fa-circle-o");
+    */
+
     //
     //
 
@@ -127,7 +135,7 @@ function clip(elem){
 
     var per = 0;
     var interval = window.setInterval(function(){
-      per++;
+      per+=2;
       if(per <= 50){
         var percent = (per * 2) / 100;
 
@@ -140,6 +148,7 @@ function clip(elem){
         $(elem).css("clip-path",generate(x1,y2,x2,y2,x3,y3,x4,y4));
         $(elem).css("-webkit-clip-path",generate(x1,y2,x2,y2,x3,y3,x4,y4));
         $(elem).css("-moz-clip-path",generate(x1,y2,x2,y2,x3,y3,x4,y4));
+
       }
       else{
         var percent = ((per - 50) * 2 ) / 100;
@@ -168,9 +177,13 @@ function clip(elem){
 
           $("#bar span").css("width","0");
           wait_per = 0;
+
+          if(elem === "#cell-robot" && robotics.done === false){
+            robotics.show();
+          }
         }
       }
-    }, 10);
+    }, 20);
 
     /*
     clipTop

@@ -29,6 +29,7 @@
     <img style="float:left;height:100%;margin-right: 5px" src="img/ak.png">
     <h1 style="float:left">ALEX KAMINSKY</h1>
     <h2 style="float:right"><a href="https://github.com/alexkaminsky"><i class="fa fa-github"></i></a></h2>
+        <h2 style="float:right"><a href="mailto:alex.kaminsky26@gmail.com" target="_top"><i class="fa fa-envelope"></i></a></h2>
     <div id="bar">
       <span></span>
     </div>
@@ -36,14 +37,14 @@
 
   <div class="part" id="part-0">
 
-    <h6 id="nav">
-      <i class="fa fa-circle-o" onclick="clip('#cell-site')" id="btn_site"></i>
-      <i class="fa fa-circle" onclick="clip('#cell-ware')" id="btn_ware"></i>
-      <i class="fa fa-circle" onclick="clip('#cell-srv')" id="btn_srv"></i>
-      <i class="fa fa-circle" onclick="clip('#cell-img')" id="btn_img"></i>
-    </h6>
+    <!--h6 id="nav">
+      <i class="fa fa-circle-o" onclick="clip('#cell-robot')" id="btn_robot"></i>
+      <i class="fa fa-circle" onclick="clip('#cell-data')" id="btn_data"></i>
+      <i class="fa fa-circle" onclick="clip('#cell-chem')" id="btn_chem"></i>
+      <i class="fa fa-circle" onclick="clip('#cell-energy')" id="btn_energy"></i>
+    </h6-->
 
-    <div style="background-color:#FBC02D" id="cell-site">
+    <div style="" id="cell-robot">
       <div>
         <h3>ROBOTICS</h3>
         <h4><i class="material-icons">memory</i></h4>
@@ -51,7 +52,7 @@
       </div>
     </div>
 
-    <div style="background-color:#00838F;display:none" id="cell-ware">
+    <div style="display:none" id="cell-data">
       <div>
         <h3>DATABASES</h3>
         <h4><i class="material-icons">dns</i></h4>
@@ -59,7 +60,7 @@
       </div>
     </div>
 
-    <div style="background-color:#FBC02D;display:none" id="cell-srv">
+    <div style="display:none" id="cell-chem">
       <div>
         <h3>CHEMISTRY</h3>
         <h4><i class="material-icons">public</i></h4>
@@ -67,7 +68,7 @@
       </div>
     </div>
 
-    <div style="background-color:#0097A7;display:none" id="cell-img">
+    <div style="display:none" id="cell-energy">
       <div>
         <h3>RENEWABLE ENERGY</h3>
         <h4><i class="material-icons">nature_people</i></h4>
@@ -77,9 +78,13 @@
     <i class="fa fa-chevron-down" style="position: absolute;z-index: 3;font-size: 54px;bottom: 5px;left: calc(50% - 27px);color: #eee;"></i>
   </div>
 
-  <div class="part part-text">
+  <div class="part part-text center">
     <h6>
       I am a senior at Deerfield Academy who is interested in biochemistry, the environment, databases, and programming. I am a member of the programming group for the Deerfield Academy FIRST Robotics team. Over the past few summers, I have studied discrete mathematics at Stanford University and organic chemistry and databases at Harvard University.
+    </h6>
+    <br/>
+    <h6>
+      I am also a head peer tutor at Deerfield, and the Head of Logistics for the "Combatting Cancer" community service event at my school.
     </h6>
     <br/>
 	</div>
@@ -229,6 +234,8 @@
   </div>
 
 	<script src="lib/fit.js"></script>
+  <script src="lib/tween.js"></script>
+  <script src="js/robotics.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
