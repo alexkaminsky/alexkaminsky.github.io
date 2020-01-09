@@ -1,8 +1,8 @@
 $(document).ready(function(){
   // Change this to the correct selector.
   $("#part-0").css("min-height",$(window).height() - 79);
-  robotics.init();
-  robotics.show();
+  /*robotics.init();
+  robotics.show();*/
 
   $( window ).resize(function() {
     $("#part-0").css("min-height",$(window).height() - 79);
@@ -13,7 +13,7 @@ $(".main-header-1").fitText();
 
 var clip_index = 0;
 var clip_elem = "";
-var clips = ["#cell-robot","#cell-data","#cell-chem","#cell-energy"];
+var clips = ["#cell-bio","#cell-patint","#cell-chem","#cell-energy"];
 var in_progress = false;
 var wait_per = 0;
 
@@ -177,10 +177,10 @@ function clip(elem){
 
           $("#bar span").css("width","0");
           wait_per = 0;
-
+          /*
           if(elem === "#cell-robot" && robotics.done === false){
             robotics.show();
-          }
+          }*/
         }
       }
     }, 20);
