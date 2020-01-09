@@ -504,7 +504,7 @@ h6.date{
   marign-right: 5px;
 }
 
-#cell-patient{
+#cell-robot{
   /*background-image: url(../img/red_robo.png);
   background-repeat: repeat;
 
@@ -512,7 +512,7 @@ h6.date{
   background-color: #F44336;
 }
 
-#cell-bio{
+#cell-data{
   /*background-image: url(http://i.imgur.com/PIJWrEi.jpg);
   background-repeat: repeat;*/
   background-color: #3F51B5;
