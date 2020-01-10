@@ -13,7 +13,7 @@ $(".main-header-1").fitText();
 
 var clip_index = 0;
 var clip_elem = "";
-var clips = ["#cell-bio","#cell-patint","#cell-chem","#cell-energy"];
+var clips = ["#cell-bio","#cell-patient","#cell-chem","#cell-energy"];
 var in_progress = false;
 var wait_per = 0;
 
